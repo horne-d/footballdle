@@ -85,11 +85,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: hsl(
-      var(--hue, 200),
-      var(--saturation, 1%),
-      calc(var(--lightness-offset, 0%) + var(--lightness, 51%))
-    );
+    background-color: #fff;
     color: rgb(0, 0, 0);
     fill: rgb(0, 0, 0);
     text-transform: uppercase;
@@ -113,33 +109,29 @@ p {
   }
   
   .key.wrong {
-    --lightness: 23%;
+    background-color: #7b7b7b;
   }
   
   .key.wrong-location {
-    --hue: 49;
-    --saturation: 51%;
-    --lightness: 47%;
+    background-color: #c3ac24;
   }
   
   .key.correct {
-    --hue: 115;
-    --saturation: 29%;
-    --lightness: 43%;
+    background-color: #538d4e;
   }
   
   .guess-grid {
     display: grid;
     justify-content: center;
     flex-grow: 1;
-    grid-template-columns: repeat(5, 6em);
-    grid-template-rows: repeat(6, 6em);
+    grid-template-columns: repeat(5, 5em);
+    grid-template-rows: repeat(6, 5em);
     gap: .25em;
     margin-bottom: 1em;
   }
   
   .tile {
-    font-size: 2.5em;
+    font-size: 2em;
     color: rgb(0, 0, 0);
     border: .05em solid #252525;
     text-transform: uppercase;
