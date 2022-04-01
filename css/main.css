@@ -258,5 +258,29 @@ p {
 
 @media only screen and (min-width: 768px) {
 
+.main_header {
+    font-size: 3em;
+}
+.sub_header {
+    font-size: 1.5em;
+}
+.guess-grid {
+    grid-template-columns: repeat(5, 3em);
+    grid-template-rows: repeat(6, 3em);
+}
 
+.tile {
+    font-size: 1em;
+}
+.keyboard {
+    grid-template-columns: repeat(40, minmax(auto, 0.4em));
+    grid-auto-rows: 3em;
+}
+.key {
+    font-size: 1em;
+}
+.key.large {
+    font-size: 1em;
+}
+	
 }
