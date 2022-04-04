@@ -20,7 +20,6 @@ nav {
   display: flex;
   width: 100%;
   font-size: 2em;
-  padding-bottom: 1em;
 }
 
 .nav_items {
@@ -33,6 +32,9 @@ nav {
 .nav_items.right_nav {
   text-align: right;
   display: contents;
+}
+.nav_items.right_nav i{
+  cursor: pointer;
 }
 
 p {
@@ -256,6 +258,19 @@ p {
     opacity: 0;
   }
 
+  .correct-green {
+    background-color: #538d4e;
+  }
+
+  .maybe-yellow {
+    background-color: #c3ac23;
+  }
+
+  .incorrect-grey {
+    background-color: #7b7b7b;
+    border: none !important;
+  }
+
 @media only screen and (min-width: 768px) {
 
 .main_header {
@@ -281,6 +296,22 @@ p {
 }
 .key.large {
     font-size: 1em;
+}
+
+.modal-body p {
+  font-size: 0.7em;
+}
+
+.modal-body span {
+  BORDER: 1px solid black;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 2em;
+  height: 2em;
+  text-align: center;
+  margin-bottom: 0.7em;
+  margin-top: 0.4em;
 }
 	
 }
