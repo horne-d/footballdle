@@ -35,6 +35,17 @@ nav {
 }
 .nav_items.right_nav i{
   cursor: pointer;
+  padding: 0 0.2em;
+}
+
+.score-section {
+  display: flex;
+  line-height: 1em;
+}
+
+p#myCurrentScore {
+  font-size: 1em;
+  padding-left: 0.3em;
 }
 
 p {

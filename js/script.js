@@ -250,9 +250,10 @@ const dictionary = [
   const msOffset = Date.now() - offsetFromDate
   const dayOffset = msOffset / 1000 / 60 / 60 / 24
   const targetWord = targetWords[Math.floor(dayOffset)]
+  const myScore = localStorage.getItem("score")
   
   startInteraction()
-  
+
   function startInteraction() {
     document.addEventListener("click", handleMouseClick)
     document.addEventListener("keydown", handleKeyPress)
@@ -413,9 +414,10 @@ const dictionary = [
       danceTiles(tiles)
       stopInteraction()
 
-      var score = parseInt(localStorage.getItem("score"));
-      localStorage.setItem("score", ++score);
-      console.log(score);
+      var myScore = parseInt(localStorage.getItem("score"));
+      localStorage.setItem("score", ++myScore);
+      console.log(myScore);
+      showScore()
       return
     }
   
@@ -439,4 +441,10 @@ const dictionary = [
         )
       }, (index * DANCE_ANIMATION_DURATION) / 5)
     })
+  }
+
+  function showScore() {
+    const myScore = localStorage.getItem("score")
+    document.getElementById("myCurrentScore").innerHTML = myScore;
+
   }

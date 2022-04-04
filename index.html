@@ -30,7 +30,9 @@
   </script>
 </head>
 
-<body>
+<body onload="showScore()">
+
+  <!-- Help Section Modal -->
   <div class="modal fade" id="helpModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
@@ -76,16 +78,38 @@
       </div>
     </div>
   </div>
+
+    <!-- Score Section Modal -->
+    <div class="modal fade" id="scoreModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title" id="exampleModalLabel">Statistics</h3>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="score-section">
+              <p>Your Score: </p>
+              <strong><p id="myCurrentScore"></p></strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- Nav Section -->
   <nav>
     <div class="nav_items left_nav">
       <p><i class="material-icons">more_vert</i></p>
     </div>
     <div class="nav_items right_nav">
-      <p id="score"><i class="material-icons">insert_chart</i></p>
+      <p id="score" data-bs-toggle="modal" data-bs-target="#scoreModal"><i class="material-icons">insert_chart</i></p>
       <p id="help" data-bs-toggle="modal" data-bs-target="#helpModal"><i class="material-icons">help_outline</i></p>
     </div>
     </ul>
   </nav>
+
+
   <div class="main_header">Footballdle</div>
   <h2 class="sub_header">Your footballing guessing game</h2>
   <div class="alert-container" data-alert-container></div>
