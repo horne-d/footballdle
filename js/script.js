@@ -253,7 +253,6 @@ const dictionary = [
   const myScore = localStorage.getItem("score")
   
   startInteraction()
-  window.onload = alert(myScore)
 
   function startInteraction() {
     document.addEventListener("click", handleMouseClick)
